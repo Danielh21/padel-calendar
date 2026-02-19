@@ -27,7 +27,7 @@ const App = () => {
   const closeModal = () => setSelectedEvent(null);
 
   const renderHeader = () => (
-    <div className="flex items-center justify-between px-8 py-6 bg-gray-800 rounded-t-xl border-b border-gray-700 ">
+    <div className="flex items-center justify-between px-8 py-6 bg-gray-800 rounded-t-xl border-b border-gray-700  ">
       <div className="flex items-center gap-4">
         <Trophy className="text-yellow-500 w-8 h-8" />
         <h1 className="text-3xl font-bold tracking-tight text-white uppercase">
