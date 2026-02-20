@@ -78,6 +78,16 @@
       "streaming_link_ids": ["premier_padel_yt"]
     },
     {
+      "id": 45,
+      "name": "Nordisk Mesterskab",
+      "location": "Vejle Padelcenter, DK",
+      "category": "Special",
+      "start_date": "2026-03-13",
+      "end_date": "2026-03-15",
+      "description": "De bedste spillere fra Norden dyster om titlen som Nordisk Mester.",
+      "streaming_link_ids": ["padel_stream_web", "padel_stream_yt", "padel_tv"]
+    },
+    {
       "id": 5,
       "name": "Cancun P2",
       "location": "Mexico",
@@ -406,6 +416,16 @@
       "end_date": "2026-11-15",
       "description": "Dubai P1 i de fantastiske rammer i UAE.",
       "streaming_link_ids": ["premier_padel_yt", "redbull_general", "viaplay"]
+    },
+    {
+      "id": 46,
+      "name": "DPF1000 Finals",
+      "location": "Simon's Padel Club, DK",
+      "category": "DPF1000",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-14",
+      "description": "Sæsonfinalen for den danske DPF1000-tour (DPF2000). Her kåres årets samlede vindere.",
+      "streaming_link_ids": ["padel_tv"]
     },
     {
       "id": 33,
