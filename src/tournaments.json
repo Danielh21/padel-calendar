@@ -152,8 +152,8 @@
       "name": "Asuncion P2",
       "location": "Paraguay",
       "category": "P2",
-      "start_date": "2026-05-04",
-      "end_date": "2026-05-10",
+      "start_date": "2026-05-18",
+      "end_date": "2026-05-24",
       "description": "Sydamerikansk tourstart i Paraguay.",
       "streaming_link_ids": ["premier_padel_yt"]
     },
@@ -292,8 +292,8 @@
       "name": "Mediterranean Games",
       "location": "Taranto, Italy",
       "category": "Special",
-      "start_date": "2026-08-21",
-      "end_date": "2026-08-28",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-30",
       "description": "De Middelhavske Lege inkluderer padel i 2026.",
       "streaming_link_ids": []
     },
@@ -328,14 +328,14 @@
       "streaming_link_ids": ["premier_padel_yt", "redbull_general"]
     },
     {
-      "id": 36,
-      "name": "Senior VM",
-      "location": "TBD",
-      "category": "Special",
+      "id": 44,
+      "name": "Europe P2",
+      "location": "TBD, Europe",
+      "category": "P2",
       "start_date": "2026-09-14",
       "end_date": "2026-09-20",
-      "description": "Verdensmesterskaberne for seniorer. Verdenseliten i de ældre rækker dyster om VM-titlen.",
-      "streaming_link_ids": []
+      "description": "En europæisk P2-turnering. Lokationen er endnu ikke offentliggjort.",
+      "streaming_link_ids": ["premier_padel_yt"]
     },
     {
       "id": 26,
@@ -358,6 +358,16 @@
       "streaming_link_ids": ["premier_padel_yt"]
     },
     {
+      "id": 28,
+      "name": "Milano P1",
+      "location": "Italy",
+      "category": "P1",
+      "start_date": "2026-10-12",
+      "end_date": "2026-10-18",
+      "description": "Turnering i modebyen Milano.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
       "id": 29,
       "name": "DPF1000 Viborg",
       "location": "Rocket Padel, DK",
@@ -366,6 +376,46 @@
       "end_date": "2026-10-24",
       "description": "Årets sidste DPF1000 i Viborg.",
       "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 30,
+      "name": "Kuwait P1",
+      "location": "Kuwait",
+      "category": "P1",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-31",
+      "description": "Premier Padel i Kuwait.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 31,
+      "name": "FIP World Cup",
+      "location": "TBD",
+      "category": "Special",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-07",
+      "description": "Verdensmesterskaberne for landshold.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 32,
+      "name": "Dubai P1",
+      "location": "Dubai, UAE",
+      "category": "P1",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-15",
+      "description": "Dubai P1 i de fantastiske rammer i UAE.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_general", "viaplay"]
+    },
+    {
+      "id": 33,
+      "name": "Mexico Major",
+      "location": "Acapulco, Mexico",
+      "category": "Major",
+      "start_date": "2026-11-23",
+      "end_date": "2026-11-29",
+      "description": "Sæsonens fjerde og sidste Major. Spilles i Acapulco, hvor padel sporten oprindeligt blev opfundet.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_general", "viaplay"]
     },
     {
       "id": 34,

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   format, 
   addMonths, 
@@ -20,6 +20,37 @@ const App = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const { sources, tournaments } = tournamentData;
   const [selectedEvent, setSelectedEvent] = useState(null);
+
+  // Kategorier og deres farver
+  const categories = [
+    { id: 'Major', color: 'bg-red-500' },
+    { id: 'P1', color: 'bg-blue-500' },
+    { id: 'P2', color: 'bg-green-500' },
+    { id: 'DPF1000', color: 'bg-red-600' },
+    { id: 'Special', color: 'bg-orange-600' },
+    { id: 'Lunar Ligaen', color: 'bg-indigo-700' },
+    { id: 'Finals', color: 'bg-purple-600' },
+    { id: 'Andre', color: 'bg-gray-400' }
+  ];
+
+  // Hent aktive kategorier fra LocalStorage eller brug alle som default
+  const [activeCategories, setActiveCategories] = useState(() => {
+    const saved = localStorage.getItem('padel_active_categories');
+    return saved ? JSON.parse(saved) : categories.map(c => c.id);
+  });
+
+  // Gem i LocalStorage når valg ændres
+  useEffect(() => {
+    localStorage.setItem('padel_active_categories', JSON.stringify(activeCategories));
+  }, [activeCategories]);
+
+  const toggleCategory = (categoryId) => {
+    setActiveCategories(prev => 
+      prev.includes(categoryId) 
+        ? prev.filter(id => id !== categoryId) 
+        : [...prev, categoryId]
+    );
+  };
 
   const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
   const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
@@ -77,7 +108,8 @@ const App = () => {
         const dayTournaments = tournaments.filter((t) => {
           const start = parseISO(t.start_date);
           const end = parseISO(t.end_date);
-          return day >= start && day <= end;
+          // Filtrer på både dato OG om kategorien er aktiv
+          return day >= start && day <= end && activeCategories.includes(t.category);
         });
 
         days.push(
@@ -112,7 +144,9 @@ const App = () => {
                               ? "bg-orange-600/60 border-orange-400 text-white shadow-sm"
                               : t.category === "Lunar Ligaen"
                                 ? "bg-indigo-700 border-indigo-300 text-white font-bold"
-                                : "bg-gray-700/40 border-gray-400 text-gray-200"
+                                : t.category === "Finals"
+                                  ? "bg-purple-900/40 border-purple-500 text-purple-200"
+                                  : "bg-gray-700/40 border-gray-400 text-gray-200"
                   }`}
                 >
                   <div className="text-[8px] md:text-[10px] font-bold md:leading-tight">
@@ -138,7 +172,6 @@ const App = () => {
   const Modal = () => {
     if (!selectedEvent) return null;
 
-    // Resolve streaming links from IDs
     const resolvedLinks = (selectedEvent.streaming_link_ids || [])
       .map(id => sources[id])
       .filter(Boolean);
@@ -166,7 +199,9 @@ const App = () => {
                         ? "bg-orange-500"
                         : selectedEvent.category === "Lunar Ligaen"
                           ? "bg-indigo-500"
-                          : "bg-gray-500"
+                          : selectedEvent.category === "Finals"
+                            ? "bg-purple-500"
+                            : "bg-gray-500"
             }`}
           />
 
@@ -252,14 +287,26 @@ const App = () => {
         {renderDays()}
         {renderCells()}
       </div>
-      <div className="mt-4 md:mt-6 flex flex-wrap gap-2 md:gap-4 justify-center text-[10px] md:text-xs p-2">
-        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-red-500 rounded-sm"></span> Major</div>
-        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-blue-500 rounded-sm"></span> P1</div>
-        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-green-500 rounded-sm"></span> P2</div>
-        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-red-600 rounded-sm"></span> DPF1000</div>
-        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-orange-600 rounded-sm"></span> Special</div>
-        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-indigo-700 rounded-sm"></span> Lunar Ligaen</div>
-        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-gray-400 rounded-sm"></span> Andre</div>
+      
+      {/* Interaktiv Legende */}
+      <div className="mt-4 md:mt-6 flex flex-wrap gap-2 md:gap-4 justify-center p-2">
+        {categories.map(cat => {
+          const isActive = activeCategories.includes(cat.id);
+          return (
+            <button 
+              key={cat.id}
+              onClick={() => toggleCategory(cat.id)}
+              className={`flex items-center gap-1.5 px-2 py-1 rounded-md transition-all border ${
+                isActive 
+                  ? 'bg-gray-800 border-gray-600 text-gray-200 opacity-100 shadow-sm' 
+                  : 'bg-gray-900 border-transparent text-gray-600 opacity-50 grayscale'
+              }`}
+            >
+              <span className={`w-2.5 h-2.5 ${cat.color} rounded-sm`}></span>
+              <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider">{cat.id}</span>
+            </button>
+          );
+        })}
       </div>
       <Modal />
     </div>
