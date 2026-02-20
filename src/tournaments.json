@@ -102,6 +102,18 @@
     ]
   },
   {
+    "id": 35,
+    "name": "Senior DM",
+    "location": "Vejle Padelcenter, DK",
+    "category": "Special",
+    "start_date": "2026-04-24",
+    "end_date": "2026-04-26",
+    "description": "Danmarksmesterskaberne for seniorer. Her findes de bedste danske seniorspillere.",
+    "streaming_links": [
+      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
+    ]
+  },
+  {
     "id": 9,
     "name": "Newgiza P2",
     "location": "Egypt",
@@ -302,6 +314,16 @@
     "streaming_links": [
       { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
     ]
+  },
+  {
+    "id": 36,
+    "name": "Senior VM",
+    "location": "TBD",
+    "category": "Special",
+    "start_date": "2026-09-14",
+    "end_date": "2026-09-20",
+    "description": "Verdensmesterskaberne for seniorer. Verdenseliten i de ældre rækker dyster om VM-titlen.",
+    "streaming_links": []
   },
   {
     "id": 26,
