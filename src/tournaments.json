@@ -1,376 +1,381 @@
-[
-  {
-    "id": 1,
-    "name": "DPF1000 Holstebro",
-    "location": "Padel 7500, DK",
-    "category": "DPF1000",
-    "start_date": "2026-01-30",
-    "end_date": "2026-01-31",
-    "description": "Sæsonåbner for den danske DPF1000-tour. Forvent den danske elite samlet i Holstebro.",
-    "streaming_links": [
-      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
-    ]
+{
+  "sources": {
+    "padel_tv": {
+      "label": "Padel-Television",
+      "url": "https://www.padel-television.se/en"
+    },
+    "premier_padel_yt": {
+      "label": "Premier Padel TV (YouTube)",
+      "url": "https://www.youtube.com/PremierPadelTV"
+    },
+    "redbull_riyadh": {
+      "label": "Red Bull TV",
+      "url": "https://www.redbull.com/int-en/events/premier-padel-riyadh"
+    },
+    "redbull_general": {
+      "label": "Red Bull TV",
+      "url": "https://www.redbull.com"
+    },
+    "viaplay": { "label": "Viaplay", "url": "https://viaplay.dk" },
+    "padel_stream_web": {
+      "label": "Padel Stream (Web)",
+      "url": "https://padelstream.dk/"
+    },
+    "padel_stream_yt": {
+      "label": "Padel Stream (YouTube)",
+      "url": "https://www.youtube.com/@PadelStream"
+    }
   },
-  {
-    "id": 2,
-    "name": "Riyadh Season P1",
-    "location": "Saudi Arabia",
-    "category": "P1",
-    "start_date": "2026-02-09",
-    "end_date": "2026-02-14",
-    "description": "Sæsonens første store turnering på Premier Padel Touren. Alle de store stjerner er med.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" },
-      { "label": "Red Bull TV", "url": "https://www.redbull.com/int-en/events/premier-padel-riyadh" },
-      { "label": "Viaplay", "url": "https://viaplay.dk" }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Battle of Denmark",
-    "location": "Aalborg, DK",
-    "category": "Special",
-    "start_date": "2026-02-21",
-    "end_date": "2026-02-21",
-    "description": "Den ultimative kamp mellem Øst- og Vestdanmarks bedste spillere. Et brag af en opvisning.",
-    "streaming_links": [
-      { "label": "Padel Stream (Web)", "url": "https://padelstream.dk/" },
-      { "label": "Padel Stream (YouTube)", "url": "https://www.youtube.com/@PadelStream" }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Gijon P2",
-    "location": "Spain",
-    "category": "P2",
-    "start_date": "2026-03-02",
-    "end_date": "2026-03-08",
-    "description": "Premier Padel rykker til Spanien for årets første P2-turnering.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Cancun P2",
-    "location": "Mexico",
-    "category": "P2",
-    "start_date": "2026-03-16",
-    "end_date": "2026-03-22",
-    "description": "Sol og padel i smukke Cancun.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "DPF1000 København",
-    "location": "PadelPadel Cph, DK",
-    "category": "DPF1000",
-    "start_date": "2026-03-20",
-    "end_date": "2026-03-21",
-    "description": "Hovedstadens største turnering i første halvår.",
-    "streaming_links": [
-      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
-    ]
-  },
-  {
-    "id": 7,
-    "name": "Miami P1",
-    "location": "USA",
-    "category": "P1",
-    "start_date": "2026-03-23",
-    "end_date": "2026-03-29",
-    "description": "Showtime i Miami. En af de mest populære destinationer på touren.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" },
-      { "label": "Red Bull TV", "url": "https://www.redbull.com" }
-    ]
-  },
-  {
-    "id": 8,
-    "name": "Qatar Major",
-    "location": "Qatar",
-    "category": "Major",
-    "start_date": "2026-04-06",
-    "end_date": "2026-04-11",
-    "description": "En af de fire største turneringer i året. 2000 point til vinderne.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" },
-      { "label": "Red Bull TV", "url": "https://www.redbull.com" },
-      { "label": "Viaplay", "url": "https://viaplay.dk" }
-    ]
-  },
-  {
-    "id": 35,
-    "name": "Senior DM",
-    "location": "Vejle Padelcenter, DK",
-    "category": "Special",
-    "start_date": "2026-04-24",
-    "end_date": "2026-04-26",
-    "description": "Danmarksmesterskaberne for seniorer. Her findes de bedste danske seniorspillere.",
-    "streaming_links": [
-      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
-    ]
-  },
-  {
-    "id": 9,
-    "name": "Newgiza P2",
-    "location": "Egypt",
-    "category": "P2",
-    "start_date": "2026-04-13",
-    "end_date": "2026-04-18",
-    "description": "Padel ved pyramiderne.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 10,
-    "name": "Brussels P2",
-    "location": "Belgium",
-    "category": "P2",
-    "start_date": "2026-04-20",
-    "end_date": "2026-04-26",
-    "description": "Indendørs padel i Bruxelles.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 11,
-    "name": "Asuncion P2",
-    "location": "Paraguay",
-    "category": "P2",
-    "start_date": "2026-05-04",
-    "end_date": "2026-05-10",
-    "description": "Sydamerikansk tourstart i Paraguay.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 12,
-    "name": "Buenos Aires P1",
-    "location": "Argentina",
-    "category": "P1",
-    "start_date": "2026-05-11",
-    "end_date": "2026-05-17",
-    "description": "Hjemmebane for mange af verdens bedste. Vanvittig atmosfære.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 13,
-    "name": "DPF1000 Slagelse",
-    "location": "Racket Club, DK",
-    "category": "DPF1000",
-    "start_date": "2026-05-15",
-    "end_date": "2026-05-16",
-    "description": "Dansk padel når det er bedst hos Racket Club.",
-    "streaming_links": [
-      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
-    ]
-  },
-  {
-    "id": 14,
-    "name": "Italy Major",
-    "location": "Italy",
-    "category": "Major",
-    "start_date": "2026-06-01",
-    "end_date": "2026-06-07",
-    "description": "Major i Rom. En af de smukkeste turneringer i kalenderen.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 15,
-    "name": "Valencia P1",
-    "location": "Spain",
-    "category": "P1",
-    "start_date": "2026-06-08",
-    "end_date": "2026-06-14",
-    "description": "Klassisk spansk turnering i padelens moderland.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 16,
-    "name": "DPF1000 Reffen",
-    "location": "Padel Yard, DK",
-    "category": "DPF1000",
-    "start_date": "2026-06-12",
-    "end_date": "2026-06-13",
-    "description": "Udendørs padel på Reffen i København. Forhåbentlig godt vejr!",
-    "streaming_links": [
-      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
-    ]
-  },
-  {
-    "id": 17,
-    "name": "Valladolid P2",
-    "location": "Spain",
-    "category": "P2",
-    "start_date": "2026-06-22",
-    "end_date": "2026-06-28",
-    "description": "Bytorvsturnering i Valladolid. Ikonisk setting.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 18,
-    "name": "Bordeaux P2",
-    "location": "France",
-    "category": "P2",
-    "start_date": "2026-06-29",
-    "end_date": "2026-07-05",
-    "description": "Fransk padel i vinens hovedstad.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 19,
-    "name": "Malaga P1",
-    "location": "Spain",
-    "category": "P1",
-    "start_date": "2026-07-13",
-    "end_date": "2026-07-19",
-    "description": "Sommerpadel i Malaga.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 20,
-    "name": "Pretoria P2",
-    "location": "South Africa",
-    "category": "P2",
-    "start_date": "2026-07-27",
-    "end_date": "2026-08-02",
-    "description": "Touren rykker til Sydafrika.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 21,
-    "name": "London P1",
-    "location": "UK",
-    "category": "P1",
-    "start_date": "2026-08-03",
-    "end_date": "2026-08-09",
-    "description": "Padel i hjertet af London.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 22,
-    "name": "Mediterranean Games",
-    "location": "Taranto, Italy",
-    "category": "Special",
-    "start_date": "2026-08-21",
-    "end_date": "2026-08-28",
-    "description": "De Middelhavske Lege inkluderer padel i 2026.",
-    "streaming_links": []
-  },
-  {
-    "id": 23,
-    "name": "DPF1000 Odense",
-    "location": "PadelBoxen, DK",
-    "category": "DPF1000",
-    "start_date": "2026-08-28",
-    "end_date": "2026-08-29",
-    "description": "HCA's fødeby danner ramme om denne DPF1000.",
-    "streaming_links": [
-      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
-    ]
-  },
-  {
-    "id": 24,
-    "name": "Madrid P1",
-    "location": "Spain",
-    "category": "P1",
-    "start_date": "2026-08-31",
-    "end_date": "2026-09-06",
-    "description": "En af sæsonens mest prestigefyldte turneringer.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 25,
-    "name": "Paris Major",
-    "location": "France",
-    "category": "Major",
-    "start_date": "2026-09-07",
-    "end_date": "2026-09-13",
-    "description": "Spilles på de berømte baner ved Roland Garros.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 36,
-    "name": "Senior VM",
-    "location": "TBD",
-    "category": "Special",
-    "start_date": "2026-09-14",
-    "end_date": "2026-09-20",
-    "description": "Verdensmesterskaberne for seniorer. Verdenseliten i de ældre rækker dyster om VM-titlen.",
-    "streaming_links": []
-  },
-  {
-    "id": 26,
-    "name": "Rotterdam P2",
-    "location": "Netherlands",
-    "category": "P2",
-    "start_date": "2026-09-28",
-    "end_date": "2026-10-04",
-    "description": "Padel i det moderne Rotterdam.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 27,
-    "name": "Germany P2",
-    "location": "Germany",
-    "category": "P2",
-    "start_date": "2026-10-05",
-    "end_date": "2026-10-11",
-    "description": "Premier Padel indtager Tyskland.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  },
-  {
-    "id": 29,
-    "name": "DPF1000 Viborg",
-    "location": "Rocket Padel, DK",
-    "category": "DPF1000",
-    "start_date": "2026-10-23",
-    "end_date": "2026-10-24",
-    "description": "Årets sidste DPF1000 i Viborg.",
-    "streaming_links": [
-      { "label": "Padel-Television", "url": "https://www.padel-television.se/en" }
-    ]
-  },
-  {
-    "id": 34,
-    "name": "Barcelona Finals",
-    "location": "Spain",
-    "category": "Finals",
-    "start_date": "2026-12-07",
-    "end_date": "2026-12-13",
-    "description": "Sæsonfinalen for de 8 bedste par i verden.",
-    "streaming_links": [
-      { "label": "Premier Padel TV (YouTube)", "url": "https://www.youtube.com/PremierPadelTV" }
-    ]
-  }
-]
+  "tournaments": [
+    {
+      "id": 1,
+      "name": "DPF1000 Holstebro",
+      "location": "Padel 7500, DK",
+      "category": "DPF1000",
+      "start_date": "2026-01-30",
+      "end_date": "2026-01-31",
+      "description": "Sæsonåbner for den danske DPF1000-tour. Forvent den danske elite samlet i Holstebro.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 40,
+      "name": "Lunar Ligaen - Start",
+      "location": "Hele Danmark",
+      "category": "Lunar Ligaen",
+      "start_date": "2026-02-01",
+      "end_date": "2026-02-01",
+      "description": "Forårssæsonen i Lunar Ligaen (Danmarks officielle holdturnering) skydes i gang i dag.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 2,
+      "name": "Riyadh Season P1",
+      "location": "Saudi Arabia",
+      "category": "P1",
+      "start_date": "2026-02-09",
+      "end_date": "2026-02-14",
+      "description": "Sæsonens første store turnering på Premier Padel Touren. Alle de store stjerner er med.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_riyadh", "viaplay"]
+    },
+    {
+      "id": 3,
+      "name": "Battle of Denmark",
+      "location": "Aalborg, DK",
+      "category": "Special",
+      "start_date": "2026-02-21",
+      "end_date": "2026-02-21",
+      "description": "Den ultimative kamp mellem Øst- og Vestdanmarks bedste spillere. Et brag af en opvisning.",
+      "streaming_link_ids": ["padel_stream_web", "padel_stream_yt"]
+    },
+    {
+      "id": 4,
+      "name": "Gijon P2",
+      "location": "Spain",
+      "category": "P2",
+      "start_date": "2026-03-02",
+      "end_date": "2026-03-08",
+      "description": "Premier Padel rykker til Spanien for årets første P2-turnering.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 5,
+      "name": "Cancun P2",
+      "location": "Mexico",
+      "category": "P2",
+      "start_date": "2026-03-16",
+      "end_date": "2026-03-22",
+      "description": "Sol og padel i smukke Cancun.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 6,
+      "name": "DPF1000 København",
+      "location": "PadelPadel Cph, DK",
+      "category": "DPF1000",
+      "start_date": "2026-03-20",
+      "end_date": "2026-03-21",
+      "description": "Hovedstadens største turnering i første halvår.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 7,
+      "name": "Miami P1",
+      "location": "USA",
+      "category": "P1",
+      "start_date": "2026-03-23",
+      "end_date": "2026-03-29",
+      "description": "Showtime i Miami. En af de mest populære destinationer på touren.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_general"]
+    },
+    {
+      "id": 8,
+      "name": "Qatar Major",
+      "location": "Qatar",
+      "category": "Major",
+      "start_date": "2026-04-06",
+      "end_date": "2026-04-11",
+      "description": "En af de fire største turneringer i året. 2000 point til vinderne.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_general", "viaplay"]
+    },
+    {
+      "id": 35,
+      "name": "Senior DM",
+      "location": "Vejle Padelcenter, DK",
+      "category": "Special",
+      "start_date": "2026-04-24",
+      "end_date": "2026-04-26",
+      "description": "Danmarksmesterskaberne for seniorer. Her findes de bedste danske seniorspillere.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 9,
+      "name": "Newgiza P2",
+      "location": "Egypt",
+      "category": "P2",
+      "start_date": "2026-04-13",
+      "end_date": "2026-04-18",
+      "description": "Padel ved pyramiderne.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 10,
+      "name": "Brussels P2",
+      "location": "Belgium",
+      "category": "P2",
+      "start_date": "2026-04-20",
+      "end_date": "2026-04-26",
+      "description": "Indendørs padel i Bruxelles.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 11,
+      "name": "Asuncion P2",
+      "location": "Paraguay",
+      "category": "P2",
+      "start_date": "2026-05-04",
+      "end_date": "2026-05-10",
+      "description": "Sydamerikansk tourstart i Paraguay.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 41,
+      "name": "Lunar Ligaen - Grundspil Slut",
+      "location": "Hele Danmark",
+      "category": "Lunar Ligaen",
+      "start_date": "2026-05-10",
+      "end_date": "2026-05-10",
+      "description": "Sidste spilledag i grundspillet for alle divisioner i Lunar Ligaen.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 12,
+      "name": "Buenos Aires P1",
+      "location": "Argentina",
+      "category": "P1",
+      "start_date": "2026-05-11",
+      "end_date": "2026-05-17",
+      "description": "Hjemmebane for mange af verdens bedste. Vanvittig atmosfære.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 13,
+      "name": "DPF1000 Slagelse",
+      "location": "Racket Club, DK",
+      "category": "DPF1000",
+      "start_date": "2026-05-15",
+      "end_date": "2026-05-16",
+      "description": "Dansk padel når det er bedst hos Racket Club.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 42,
+      "name": "Lunar Ligaen - Semifinaler",
+      "location": "TBD, DK",
+      "category": "Lunar Ligaen",
+      "start_date": "2026-05-23",
+      "end_date": "2026-05-23",
+      "description": "Semifinaler i Elitedivisionen for Lunar Ligaen.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 14,
+      "name": "Italy Major",
+      "location": "Italy",
+      "category": "Major",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-07",
+      "description": "Major i Rom. En af de smukkeste turneringer i kalenderen.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_general"]
+    },
+    {
+      "id": 43,
+      "name": "Lunar Ligaen - Finale",
+      "location": "X3 Padel - Århus",
+      "category": "Lunar Ligaen",
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-05",
+      "description": "Den store finale i Elitedivisionen i Lunar Ligaen.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 15,
+      "name": "Valencia P1",
+      "location": "Spain",
+      "category": "P1",
+      "start_date": "2026-06-08",
+      "end_date": "2026-06-14",
+      "description": "Klassisk spansk turnering i padelens moderland.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 16,
+      "name": "DPF1000 Reffen",
+      "location": "Padel Yard, DK",
+      "category": "DPF1000",
+      "start_date": "2026-06-12",
+      "end_date": "2026-06-13",
+      "description": "Udendørs padel på Reffen i København. Forhåbentlig godt vejr!",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 17,
+      "name": "Valladolid P2",
+      "location": "Spain",
+      "category": "P2",
+      "start_date": "2026-06-22",
+      "end_date": "2026-06-28",
+      "description": "Bytorvsturnering i Valladolid. Ikonisk setting.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 18,
+      "name": "Bordeaux P2",
+      "location": "France",
+      "category": "P2",
+      "start_date": "2026-06-29",
+      "end_date": "2026-07-05",
+      "description": "Fransk padel i vinens hovedstad.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 19,
+      "name": "Malaga P1",
+      "location": "Spain",
+      "category": "P1",
+      "start_date": "2026-07-13",
+      "end_date": "2026-07-19",
+      "description": "Sommerpadel i Malaga.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 20,
+      "name": "Pretoria P2",
+      "location": "South Africa",
+      "category": "P2",
+      "start_date": "2026-07-27",
+      "end_date": "2026-08-02",
+      "description": "Touren rykker til Sydafrika.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 21,
+      "name": "London P1",
+      "location": "UK",
+      "category": "P1",
+      "start_date": "2026-08-03",
+      "end_date": "2026-08-09",
+      "description": "Padel i hjertet af London.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 22,
+      "name": "Mediterranean Games",
+      "location": "Taranto, Italy",
+      "category": "Special",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-28",
+      "description": "De Middelhavske Lege inkluderer padel i 2026.",
+      "streaming_link_ids": []
+    },
+    {
+      "id": 23,
+      "name": "DPF1000 Odense",
+      "location": "PadelBoxen, DK",
+      "category": "DPF1000",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "description": "HCA's fødeby danner ramme om denne DPF1000.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 24,
+      "name": "Madrid P1",
+      "location": "Spain",
+      "category": "P1",
+      "start_date": "2026-08-31",
+      "end_date": "2026-09-06",
+      "description": "En af sæsonens mest prestigefyldte turneringer.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 25,
+      "name": "Paris Major",
+      "location": "France",
+      "category": "Major",
+      "start_date": "2026-09-07",
+      "end_date": "2026-09-13",
+      "description": "Spilles på de berømte baner ved Roland Garros.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_general"]
+    },
+    {
+      "id": 36,
+      "name": "Senior VM",
+      "location": "TBD",
+      "category": "Special",
+      "start_date": "2026-09-14",
+      "end_date": "2026-09-20",
+      "description": "Verdensmesterskaberne for seniorer. Verdenseliten i de ældre rækker dyster om VM-titlen.",
+      "streaming_link_ids": []
+    },
+    {
+      "id": 26,
+      "name": "Rotterdam P2",
+      "location": "Netherlands",
+      "category": "P2",
+      "start_date": "2026-09-28",
+      "end_date": "2026-10-04",
+      "description": "Padel i det moderne Rotterdam.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 27,
+      "name": "Germany P2",
+      "location": "Germany",
+      "category": "P2",
+      "start_date": "2026-10-05",
+      "end_date": "2026-10-11",
+      "description": "Premier Padel indtager Tyskland.",
+      "streaming_link_ids": ["premier_padel_yt"]
+    },
+    {
+      "id": 29,
+      "name": "DPF1000 Viborg",
+      "location": "Rocket Padel, DK",
+      "category": "DPF1000",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "description": "Årets sidste DPF1000 i Viborg.",
+      "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 34,
+      "name": "Barcelona Finals",
+      "location": "Spain",
+      "category": "Finals",
+      "start_date": "2026-12-07",
+      "end_date": "2026-12-13",
+      "description": "Sæsonfinalen for de 8 bedste par i verden.",
+      "streaming_link_ids": ["premier_padel_yt", "redbull_general"]
+    }
+  ]
+}

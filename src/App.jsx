@@ -18,7 +18,7 @@ import tournamentData from './tournaments.json';
 
 const App = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [tournaments] = useState(tournamentData);
+  const { sources, tournaments } = tournamentData;
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
@@ -73,8 +73,7 @@ const App = () => {
     while (day <= endDate) {
       for (let i = 0; i < 7; i++) {
         const formattedDate = format(day, "d");
-        const cloneDay = day;
-
+        
         const dayTournaments = tournaments.filter((t) => {
           const start = parseISO(t.start_date);
           const end = parseISO(t.end_date);
@@ -111,10 +110,12 @@ const App = () => {
                             ? "bg-red-600 border-white text-white"
                             : t.category === "Special"
                               ? "bg-orange-600/60 border-orange-400 text-white shadow-sm"
-                              : "bg-gray-700/40 border-gray-400 text-gray-200"
+                              : t.category === "Lunar Ligaen"
+                                ? "bg-indigo-700 border-indigo-300 text-white font-bold"
+                                : "bg-gray-700/40 border-gray-400 text-gray-200"
                   }`}
                 >
-                  <div className="text-[8px] li  md:text-[10px] font-bold md:leading-tight">
+                  <div className="text-[8px] md:text-[10px] font-bold md:leading-tight">
                     {t.name}
                   </div>
                 </div>
@@ -137,6 +138,11 @@ const App = () => {
   const Modal = () => {
     if (!selectedEvent) return null;
 
+    // Resolve streaming links from IDs
+    const resolvedLinks = (selectedEvent.streaming_link_ids || [])
+      .map(id => sources[id])
+      .filter(Boolean);
+
     return (
       <div
         className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
@@ -158,7 +164,9 @@ const App = () => {
                       ? "bg-red-600"
                       : selectedEvent.category === "Special"
                         ? "bg-orange-500"
-                        : "bg-gray-500"
+                        : selectedEvent.category === "Lunar Ligaen"
+                          ? "bg-indigo-500"
+                          : "bg-gray-500"
             }`}
           />
 
@@ -210,27 +218,26 @@ const App = () => {
                 </div>
               </div>
 
-              {selectedEvent.streaming_links &&
-                selectedEvent.streaming_links.length > 0 && (
-                  <div className="pt-4 border-t border-gray-700">
-                    <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase mb-3 flex items-center gap-2">
-                      <Video size={14} /> Streaming & Links
-                    </p>
-                    <div className="flex flex-col md:flex-row flex-wrap gap-2 md:gap-3">
-                      {selectedEvent.streaming_links.map((link, i) => (
-                        <a
-                          key={i}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-sm font-bold transition-all border border-gray-600"
-                        >
-                          {link.label} <ExternalLink size={14} />
-                        </a>
-                      ))}
-                    </div>
+              {resolvedLinks.length > 0 && (
+                <div className="pt-4 border-t border-gray-700">
+                  <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase mb-3 flex items-center gap-2">
+                    <Video size={14} /> Streaming & Links
+                  </p>
+                  <div className="flex flex-col md:flex-row flex-wrap gap-2 md:gap-3">
+                    {resolvedLinks.map((link, i) => (
+                      <a
+                        key={i}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-sm font-bold transition-all border border-gray-600"
+                      >
+                        {link.label} <ExternalLink size={14} />
+                      </a>
+                    ))}
                   </div>
-                )}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -251,6 +258,7 @@ const App = () => {
         <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-green-500 rounded-sm"></span> P2</div>
         <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-red-600 rounded-sm"></span> DPF1000</div>
         <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-orange-600 rounded-sm"></span> Special</div>
+        <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-indigo-700 rounded-sm"></span> Lunar Ligaen</div>
         <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-gray-400 rounded-sm"></span> Andre</div>
       </div>
       <Modal />
