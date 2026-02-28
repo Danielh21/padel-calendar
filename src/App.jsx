@@ -23,7 +23,7 @@ const App = () => {
 
   const downloadIcs = (event) => {
     const start = parseISO(event.start_date);
-    const end = addDays(parseISO(event.end_date), 1); // ICS slutdato skal være eksklusiv (dagen efter)
+    const end = addDays(parseISO(event.end_date), 1);
     
     const formatDate = (date) => format(date, "yyyyMMdd");
     const now = format(new Date(), "yyyyMMdd'T'HHmmss'Z'");
@@ -48,6 +48,47 @@ const App = () => {
     const link = document.createElement('a');
     link.href = window.URL.createObjectURL(blob);
     link.setAttribute('download', `${event.name.replace(/\s+/g, '_')}.ics`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const downloadAllIcs = () => {
+    const activeEvents = tournaments.filter(t => activeCategories.includes(t.category));
+    if (activeEvents.length === 0) return alert("Vælg mindst én kategori for at eksportere.");
+
+    const now = format(new Date(), "yyyyMMdd'T'HHmmss'Z'");
+    const formatDate = (date) => format(date, "yyyyMMdd");
+
+    let icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Padel Calendar//DA',
+      'X-WR-CALNAME:Padel Kalender 2026',
+      'X-WR-TIMEZONE:Europe/Copenhagen'
+    ];
+
+    activeEvents.forEach(event => {
+      const start = parseISO(event.start_date);
+      const end = addDays(parseISO(event.end_date), 1);
+      
+      icsContent.push('BEGIN:VEVENT');
+      icsContent.push(`UID:${event.id}-${event.start_date}@padelcalendar.dk`);
+      icsContent.push(`DTSTAMP:${now}`);
+      icsContent.push(`DTSTART;VALUE=DATE:${formatDate(start)}`);
+      icsContent.push(`DTEND;VALUE=DATE:${formatDate(end)}`);
+      icsContent.push(`SUMMARY:${event.name}`);
+      icsContent.push(`DESCRIPTION:${event.description || ''}`);
+      icsContent.push(`LOCATION:${event.location}`);
+      icsContent.push('END:VEVENT');
+    });
+
+    icsContent.push('END:VCALENDAR');
+
+    const blob = new Blob([icsContent.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.setAttribute('download', `Padel_Kalender_2026.ics`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -99,6 +140,13 @@ const App = () => {
         </h1>
       </div>
       <div className="flex gap-1 md:gap-3">
+        <button 
+          onClick={downloadAllIcs}
+          className="hidden md:flex items-center gap-2 px-3 py-2 bg-blue-600/20 hover:bg-blue-600/40 text-blue-400 rounded-lg text-xs font-bold transition-all border border-blue-500/30 mr-2"
+          title="Eksporter aktive kategorier"
+        >
+          <CalendarPlus size={16} /> Eksporter alle
+        </button>
         <button onClick={prevMonth} className="p-2 hover:bg-gray-700 rounded-full transition-colors text-gray-400 hover:text-white">
           <ChevronLeft size={24} className="md:w-7 md:h-7" />
         </button>
