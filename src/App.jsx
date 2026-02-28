@@ -13,13 +13,45 @@ import {
   parseISO 
 } from 'date-fns';
 import { da } from 'date-fns/locale';
-import { ChevronLeft, ChevronRight, MapPin, Trophy, ExternalLink, X, Info, Video } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MapPin, Trophy, ExternalLink, X, Info, Video, CalendarPlus } from 'lucide-react';
 import tournamentData from './tournaments.json';
 
 const App = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const { sources, tournaments } = tournamentData;
   const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const downloadIcs = (event) => {
+    const start = parseISO(event.start_date);
+    const end = addDays(parseISO(event.end_date), 1); // ICS slutdato skal være eksklusiv (dagen efter)
+    
+    const formatDate = (date) => format(date, "yyyyMMdd");
+    const now = format(new Date(), "yyyyMMdd'T'HHmmss'Z'");
+
+    const icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Padel Calendar//DA',
+      'BEGIN:VEVENT',
+      `UID:${event.id}-${event.start_date}@padelcalendar.dk`,
+      `DTSTAMP:${now}`,
+      `DTSTART;VALUE=DATE:${formatDate(start)}`,
+      `DTEND;VALUE=DATE:${formatDate(end)}`,
+      `SUMMARY:${event.name}`,
+      `DESCRIPTION:${event.description || ''}`,
+      `LOCATION:${event.location}`,
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.setAttribute('download', `${event.name.replace(/\s+/g, '_')}.ics`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   // Kategorier og deres farver
   const categories = [
@@ -255,6 +287,18 @@ const App = () => {
                   </p>
                 </div>
               </div>
+
+                <div className="pt-4 border-t border-gray-700">
+                  <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase mb-3 flex items-center gap-2">
+                    <CalendarPlus size={14} /> Kalender
+                  </p>
+                  <button 
+                    onClick={() => downloadIcs(selectedEvent)}
+                    className="flex items-center justify-center gap-2 w-full md:w-auto px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-bold transition-all shadow-lg"
+                  >
+                    Tilføj til min kalender (.ics)
+                  </button>
+                </div>
 
               {resolvedLinks.length > 0 && (
                 <div className="pt-4 border-t border-gray-700">
