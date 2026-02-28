@@ -24,6 +24,14 @@
     "padel_stream_yt": {
       "label": "Padel Stream (YouTube)",
       "url": "https://www.youtube.com/@PadelStream"
+    },
+    "danske_padel_klip": {
+      "label": "Danske Padel Klip (YouTube)",
+      "url": "https://www.youtube.com/@DanskePadelKlip"
+    },
+    "fip_finland_live": {
+      "label": "Se kampen her (Live)",
+      "url": "https://www.youtube.com/live/K9WAmLfHxdA"
     }
   },
   "tournaments": [
@@ -36,6 +44,16 @@
       "end_date": "2026-01-31",
       "description": "Sæsonåbner for den danske DPF1000-tour. Forvent den danske elite samlet i Holstebro.",
       "streaming_link_ids": ["padel_tv"]
+    },
+    {
+      "id": 47,
+      "name": "FIP Silver Finland - Semi",
+      "location": "Finland",
+      "category": "FIP - DK",
+      "start_date": "2026-02-28",
+      "end_date": "2026-02-28",
+      "description": "Semi-finale mod #19 og #25 i verden. Oscar Sebber Gormsen & Albin Olsson kæmper om en plads i finalen!",
+      "streaming_link_ids": ["fip_finland_live", "danske_padel_klip"]
     },
     {
       "id": 40,
@@ -80,12 +98,12 @@
     {
       "id": 45,
       "name": "Nordisk Mesterskab",
-      "location": "Vejle Padelcenter, DK",
+      "location": "TBD, Skandinavien",
       "category": "Special",
       "start_date": "2026-03-13",
       "end_date": "2026-03-15",
       "description": "De bedste spillere fra Norden dyster om titlen som Nordisk Mester.",
-      "streaming_link_ids": ["padel_stream_web", "padel_stream_yt", "padel_tv"]
+      "streaming_link_ids": ["padel_stream_web", "padel_tv"]
     },
     {
       "id": 5,

@@ -29,6 +29,7 @@ const App = () => {
     { id: 'DPF1000', color: 'bg-red-600' },
     { id: 'Special', color: 'bg-orange-600' },
     { id: 'Lunar Ligaen', color: 'bg-indigo-700' },
+    { id: 'FIP - DK', color: 'bg-sky-500' },
     { id: 'Finals', color: 'bg-purple-600' },
     { id: 'Andre', color: 'bg-gray-400' }
   ];
@@ -144,7 +145,9 @@ const App = () => {
                               ? "bg-orange-600/60 border-orange-400 text-white shadow-sm"
                               : t.category === "Lunar Ligaen"
                                 ? "bg-indigo-700 border-indigo-300 text-white font-bold"
-                                : t.category === "Finals"
+                                : t.category === "FIP - DK"
+                                  ? "bg-sky-600 border-sky-200 text-white font-bold shadow-sm animate-pulse"
+                                  : t.category === "Finals"
                                   ? "bg-purple-900/40 border-purple-500 text-purple-200"
                                   : "bg-gray-700/40 border-gray-400 text-gray-200"
                   }`}
