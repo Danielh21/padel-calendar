@@ -28,6 +28,14 @@ const App = () => {
     const formatDate = (date) => format(date, "yyyyMMdd");
     const now = format(new Date(), "yyyyMMdd'T'HHmmss'Z'");
 
+    const resolvedLinks = (event.streaming_link_ids || [])
+      .map(id => sources[id])
+      .filter(Boolean);
+
+    const linksText = resolvedLinks.length > 0 
+      ? `\n\nStreaming Links:\n${resolvedLinks.map(l => `- ${l.label}: ${l.url}`).join('\n')}`
+      : '';
+
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
@@ -38,7 +46,7 @@ const App = () => {
       `DTSTART;VALUE=DATE:${formatDate(start)}`,
       `DTEND;VALUE=DATE:${formatDate(end)}`,
       `SUMMARY:${event.name}`,
-      `DESCRIPTION:${event.description || ''}`,
+      `DESCRIPTION:${(event.description || '').replace(/\n/g, '\\n')}${linksText.replace(/\n/g, '\\n')}`,
       `LOCATION:${event.location}`,
       'END:VEVENT',
       'END:VCALENDAR'
@@ -72,13 +80,21 @@ const App = () => {
       const start = parseISO(event.start_date);
       const end = addDays(parseISO(event.end_date), 1);
       
+      const resolvedLinks = (event.streaming_link_ids || [])
+        .map(id => sources[id])
+        .filter(Boolean);
+
+      const linksText = resolvedLinks.length > 0 
+        ? `\\n\\nStreaming Links:\\n${resolvedLinks.map(l => `- ${l.label}: ${l.url}`).join('\\n')}`
+        : '';
+
       icsContent.push('BEGIN:VEVENT');
       icsContent.push(`UID:${event.id}-${event.start_date}@padelcalendar.dk`);
       icsContent.push(`DTSTAMP:${now}`);
       icsContent.push(`DTSTART;VALUE=DATE:${formatDate(start)}`);
       icsContent.push(`DTEND;VALUE=DATE:${formatDate(end)}`);
       icsContent.push(`SUMMARY:${event.name}`);
-      icsContent.push(`DESCRIPTION:${event.description || ''}`);
+      icsContent.push(`DESCRIPTION:${(event.description || '').replace(/\n/g, '\\n')}${linksText}`);
       icsContent.push(`LOCATION:${event.location}`);
       icsContent.push('END:VEVENT');
     });
