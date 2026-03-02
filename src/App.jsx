@@ -352,19 +352,7 @@ const App = () => {
                 </div>
               </div>
 
-                <div className="pt-4 border-t border-gray-700">
-                  <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase mb-3 flex items-center gap-2">
-                    <CalendarPlus size={14} /> Kalender
-                  </p>
-                  <button 
-                    onClick={() => downloadIcs(selectedEvent)}
-                    className="flex items-center justify-center gap-2 w-full md:w-auto px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-bold transition-all shadow-lg"
-                  >
-                    Tilføj til min kalender (.ics)
-                  </button>
-                </div>
-
-              {resolvedLinks.length > 0 && (
+                {resolvedLinks.length > 0 && (
                 <div className="pt-4 border-t border-gray-700">
                   <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase mb-3 flex items-center gap-2">
                     <Video size={14} /> Streaming & Links
@@ -376,7 +364,7 @@ const App = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-sm font-bold transition-all border border-gray-600"
+                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-bold transition-all shadow-md"
                       >
                         {link.label} <ExternalLink size={14} />
                       </a>
@@ -384,6 +372,18 @@ const App = () => {
                   </div>
                 </div>
               )}
+
+              <div className="pt-4 border-t border-gray-700">
+                <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase mb-3 flex items-center gap-2">
+                  <CalendarPlus size={14} /> Kalender
+                </p>
+                <button 
+                  onClick={() => downloadIcs(selectedEvent)}
+                  className="flex items-center justify-center gap-2 w-full md:w-auto px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-sm font-bold transition-all border border-gray-600 shadow-sm"
+                >
+                  Tilføj til min kalender (.ics)
+                </button>
+              </div>
             </div>
           </div>
         </div>
